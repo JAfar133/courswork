@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование</title>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/fileList.css}"/>
+    <style>body{background-image: url("css/images/qweasd.jpg");} </style>
+</head>
+<body>
+    <header th:insert="blocks/header :: header"></header>
+    <div class="page_layout">
+        <div th:insert="blocks/list::list"></div>
+        <div class="block-body">
+            <div class="container">
+                <p th:text="${text}" id="pinfo1"></p>
+                <p th:text="${fileName}" id="pinfo2"></p>
+
+            </div>
+            <div th:insert="blocks/table :: table"></div>
+            <div class="edit_panel">
+                <span style="margin-top:80px; margin-left:70px; color:#CAD4D6;">Чтобы сохранить изменения нажмите закончить редактирования</span>
+                <form th:object="${goods}" action="" method="POST">
+                    <div th:if="${Error}" class="error" style="color:#CA0003;">
+                        <input th:if="${#fields.hasErrors('id')}" th:field="*{id}" id="errorIn" type="text" name="id" placeholder="10001" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);">
+                        <input th:unless="${#fields.hasErrors('id')}" th:field="*{id}" class="inline" type="text" name="id" placeholder="10001">
+                        <input th:unless="${storeNameNull}"th:field="*{storeName}" class="inline" type="text" name="store_name" placeholder="Sportmaster">
+                        <input th:if="${storeNameNull}" th:field="*{storeName}" class="errorIn" type="text" name="store_name" placeholder="Sportmaster" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);">
+                        <input th:if="${#fields.hasErrors('price')}" th:field="*{price}" class="errorIn" type="text" name="price" placeholder="5.5" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);">
+                        <input th:unless="${#fields.hasErrors('price')}" th:field="*{price}" class="inline" type="text" name="price" placeholder="5.5">
+                        <div>Ошибка ввода</div>
+                    </div>
+                    <div th:unless="${Error}">
+                        <input th:field="*{id}" class="inline" type="text" name="id" placeholder="10001">
+                        <input th:unless="${storeNameNull}"th:field="*{storeName}" class="inline" type="text" name="store_name" placeholder="Sportmaster">
+                        <input th:if="${storeNameNull}" th:field="*{storeName}" class="errorIn" type="text" name="store_name" placeholder="Sportmaster" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);">
+                        <input th:field="*{price}" class="inline" type="text" name="price" placeholder="5.5">
+                        <div th:if="${storeNameNull}" style="color:#CA0003;">Ошибка ввода</div>
+                    </div>
+                    <input name="add" type="submit" value="Добавить">
+                    <input name="update" type="submit" value="Обновить"><br>
+                    <input name="delete" type="submit" value="Удалить" style="border-radius:0 0 0 23px">
+                    <input name="delete_group" type="submit" value="Удалить группу записей: все товары с заданного магазина" style="border-radius:0 0 23px 0">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

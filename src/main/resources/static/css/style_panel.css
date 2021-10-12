@@ -1,0 +1,123 @@
+.edit_panel{
+    margin-top:80px;
+}
+.sort a{
+   padding-top:5px;
+   margin-top:5px;
+   margin-bottom:5px;
+   width:147px;
+   height:50px;
+   text-decoration: none;
+   display: inline-block;
+   background-color:rgba(26,38,69,0.8);
+   text-align:center;
+   border: 1px solid #37B5A5;
+   color:#CAD4D6;
+
+}
+.number_store{
+text-align:left;
+}
+.edit_panel input{
+    margin-top:5px;
+    margin-bottom:5px;
+    width:196px;
+    height:30px;
+    text-decoration: none;
+    display: inline-block;
+    background-color:rgba(26,38,69,0.8);
+    text-align:center;
+    border: 1px solid #37B5A5;
+    color:#CAD4D6;
+}
+.edit_panel input[type="submit"]{
+    margin-bottom:0px;
+    width:195px;
+    margin-right:0px;
+}
+.edit_panel input[name="store_name"]{
+    width:197px;
+}
+.edit_panel input[name="price"]{
+    width:200px;
+}
+.edit_panel input[name="delete_group"],.edit_panel input[name="update"]{
+    width:401px;
+}
+.edit_panel input[name="add"],.edit_panel input[name="update"]{
+    margin-top:10px;
+}
+
+.button_pannel input{
+  margin-top:5px;
+  margin-bottom:5px;
+  width:298px;
+  height:30px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: rgba(26,38,69,0.8);
+  text-align:center;
+  border: 1px solid #37B5A5;
+  color:#CAD4D6;
+}
+.panel a{
+    padding-top:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    width:298px;
+    height:30px;
+    text-decoration: none;
+    display: inline-block;
+    background-color:rgba(26,38,69,0.8);
+    text-align:center;
+    border: 1px solid #37B5A5;
+    color:#CAD4D6;
+}
+input[type="submit"], a .edit_panel input{
+    cursor: pointer;
+}
+input[name="range1"],input[name="range2"]{
+  margin-top:5px;
+  margin-left:19px;
+  width:120px;
+}
+
+input[name="range1"],input[name="range2"],input[name="filter"]{
+    border:1px solid #CAD4D6;
+    color: #CAD4D6;
+    background:none;
+}
+input[name="number_store"]{
+    margin-top:-10px;
+    border:1px solid #000;
+    color: #fff;
+    height:31px;
+}
+input[name="range1"]:hover,input[name="range2"]:hover,input[name="filter"]:hover{
+    border:1px solid #37B5A5;
+    background:none;
+}
+input[type="submit"]:hover, .box a:hover, .edit_panel input[type="submit"]:hover, .inputText a:hover{
+    color:#fff;
+    background-color:rgba(30, 51, 82, 0.8);
+    border:1px solid #CAD4D6;
+}
+.range_text{
+  display: inline-block;
+  margin-left:55px;
+}
+#filter_text{
+    margin-top:20px;
+    margin-left:48px;
+}
+.above_avg{
+  margin-left:49px;
+  display: inline-block;
+}
+.in_range{
+  margin-left:16px;
+}
+#min_max{
+    width:600px;
+}
+

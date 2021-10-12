@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ОПИСАНИЕ</title>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
+    <style>body{background-image: url("css/images/qweasd.jpg");} </style>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="page_layout">
+    <div class="block-body">
+        <div class="about" style="color:#CAD4D6;">
+            <h1>ОПИСАНИЕ ИС</h1>
+            <p>текст1</p>
+            <p>текст2</p>
+            <p>текст3</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

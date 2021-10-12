@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/fileList.css}"/>
+    <style>body{background-image: url("css/images/qweasd.jpg");} </style>
+
+</head>
+<body>
+    <header th:insert="blocks/header :: header"></header>
+    <div class="page_layout">
+        <div th:insert="blocks/list::list"></div>
+        <div class="block-body">
+            <div class="container">
+                <p th:text="${text}" id="pinfo1"></p>
+                <p th:text="${fileName}" id="pinfo2"></p>
+            </div>
+            <div th:insert="blocks/table :: table"></div>
+            <div th:insert="blocks/button_main_panel :: button_main_panel"></div>
+        </div>
+        <script type="text/javascript" th:src="@{js/script.js}" src="js/script.js"></script>
+    </div>
+</body>
+</html>

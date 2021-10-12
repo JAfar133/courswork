@@ -1,0 +1,13 @@
+<div th:fragment="list" class="file_list">
+    <h3 style="color:#CAD4D6;" id="list_h3">Список файлов на сервере</h3>
+    <form action="/select">
+        <div class="scroll">
+            <ul th:each="el:${fileList}" class="list_ul">
+                <li class="list_li">
+                    <input name = "file" type="submit" th:value="${el}">
+                    <input name="del" type = "submit" th:value="${'del'+'   '+el}"/>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>

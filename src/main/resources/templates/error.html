@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка</title>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
+    <style type="text/css">
+       small {
+        font-size: 110%;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        color: #333366;
+       }
+       body{background-image: url("css/images/qweasd.jpg");}
+  </style>
+
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="page_layout">
+<div class="block-body">
+    <div class="button_pannel">
+        <h1 style="color:#CAD4D6;">Что-то пошло не так...</h1>
+        <small style="color:#CAD4D6;">ОШИБКА: <small th:text="${status}" style="color:#CAD4D6;"></small></small><br>
+        <a href="/" style="color:#CAD4D6;">Вернуться на главную</a>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

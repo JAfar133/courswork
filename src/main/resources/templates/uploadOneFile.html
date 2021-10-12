@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка файла</title>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/fileList.css}"/>
+    <style>body{background-image: url("css/images/qweasd.jpg");} </style>
+</head>
+
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="page_layout">
+    <!-- MyUploadForm -->
+    <div class="upload">
+        <h3 style="color:#CAD4D6;">Загрузите один файл:</h3>
+        <form th:object="${myUploadForm}" method="POST"
+              action="" enctype="multipart/form-data">
+            <input style="color:#CAD4D6;" th:field="*{fileDatas}" type="file"/>
+            <br />
+            <input type="submit" value="Загрузить">
+        </form>
+    </div>
+</div>
+</body>
+</html>

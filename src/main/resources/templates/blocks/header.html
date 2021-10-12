@@ -1,0 +1,34 @@
+<div th:fragment="header">
+    <nav>
+        <div id="mainmenu">
+            <ul class="firstUl">
+                <!-- Пункт меню 1 -->
+                <li><a>Файл</a>
+                    <ul>
+                        <li><a href="/new_file">Новый</a></li>
+                        <li><a href="/uploadOneFile">Открыть</a></li>
+                        <li><a href="/download">Скачать файл</a></li>
+                        <li><a href="/back">Главная страница</a></li>
+                        <li><a href="/open_default">Открыть файл по умолчанию</a></li>
+                    </ul>
+                </li>
+                <!-- Пункт меню 2 -->
+                <li><a>Редактирование</a>
+                    <ul>
+                        <li><a href="/edit">Начать редактирование</a></li>
+                        <li><a href="/endEdit">Закончить редактирование</a></li>
+                    </ul>
+                </li>
+                <!-- Пункт меню 3 -->
+                <li><a>Справка</a>
+                    <ul>
+                        <li><a href="/about_program">О программе</a></li>
+                        <li><a href="/description">Описание ИС</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Конец списка -->
+        </div>
+        <!-- Конец блока #mainmenu -->
+    </nav>
+</div>

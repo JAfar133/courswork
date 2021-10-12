@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/fileList.css}"/>
+    <style>body{background-image: url("css/images/qweasd.jpg");} </style>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="page_layout">
+    <div th:insert="blocks/list::list"></div>
+        <div class="block-body">
+            <div class="container">
+                <p th:text="${text}" id="pinfo1"></p>
+                <p th:text="${fileName}" id="pinfo2"></p>
+            </div>
+            <div class="main-table" >
+                <div class="tbl-header">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th id="th1">Ключ продукта</th>
+                            <th id="th2">Мин. стоимость</th>
+                            <th id="th3">Макс. стоимость</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbl-content">
+                    <table>
+                        <tbody>
+                        <tr th:each="el:${goodsList}">
+                            <td th:text="${el.getId}"></td>
+                            <td th:text="${el.getPrice}"></td>
+                            <td th:text="${el.getPrice1}" ></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div th:insert="blocks/button_main_panel :: button_main_panel"></div>
+        </div>
+</div>
+</body>
+</html>

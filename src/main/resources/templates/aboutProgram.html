@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>О ПРОГРАММЕ</title>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
+    <style>body{background-image: url("css/images/qweasd.jpg");} </style>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="page_layout">
+    <div class="block-body">
+        <div class="about" style="margin-bottom:4px;">
+            <h1 style="color:#CAD4D6;">О ПРОГРАММЕ</h1>
+            <p style="margin-bottom:4px;color:#CAD4D6;">Программа для обработки данных, представленных в формате таблице</p>
+            <p style="margin-bottom:4px;">Таблица содержит информацию о товарах в магазинах города и их стоимости</p>
+            <p style="margin-bottom:4px;">
+                Сущность "Товар" имеет 3 поля - ключ товара, название магазина и стоимость товара.
+                Один и тот же товар может содержаться в разных магазинах, также в одном и
+                том же магазине может быть много товаров. Следовательно, реализовано отношение
+                Many-to-Many(многие ко многим). Таблица представлена в виде множества, что значит,-
+                в таблице нет одинаковых столбцов - нет товаров с одинаковыми полями ключ и название
+                магазина.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

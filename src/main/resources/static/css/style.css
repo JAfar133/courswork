@@ -1,0 +1,123 @@
+html, body{
+	margin: 0;
+}
+.page_layout{
+    padding-top:70px;
+    display:block;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1250px;
+}
+p{
+    color:#CAD4D6;
+    background-color:#192646;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    display:inline-block;
+    text-align:center;
+    border:1px solid #45464F;
+    border-bottom:none;
+    border-radius:21px 21px 0 0;
+
+}
+.block-body{
+    border:3px solid #45464F;
+    padding:10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:24px;
+    width: 626px;
+}
+#pinfo1{
+    border-radius:24px 24px 0 0;
+    border-bottom: 1px solid #45464F;
+}
+.url_info{
+    margin-bottom:0px;
+}
+
+.upload{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    border: 1px solid #252F48;
+}
+
+input[type="file"]::file-selector-button {
+    width:300px;
+    height:40px;
+    cursor: pointer;
+    padding: .2em .4em;
+    background-color:rgba(26,38,69,0.8);
+    text-align:center;
+    border: 1px solid #37B5A5;
+    color:#CAD4D6;
+    margin-bottom:5px;
+    margin-top:5px;
+    display: inline-block;
+}
+.upload h3{
+    text-align:center;
+}
+.upload input[type="submit"]{
+    width:300px;
+    height:40px;
+    cursor: pointer;
+    padding: .2em .4em;
+    background-color:rgba(26,38,69,0.8);
+    text-align:center;
+    border: 1px solid #37B5A5;
+    color:#CAD4D6;
+    margin-bottom:5px;
+    margin-top:5px;
+    display: inline-block;
+    text-align:center;
+}
+
+
+input[type=file]::file-selector-button:hover {
+    color:#fff;
+    background-color:#1E3352;
+    border:1px solid #CAD4D6;
+}
+.about h1{
+    text-align:center;
+}
+
+@-webkit-keyframes shake {
+0% { -webkit-transform: translate(1px, 1px) rotate(0deg); }
+10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+20% { -webkit-transform: translate(-1px, 0px    ) rotate(1deg); }
+30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+60% { -webkit-transform: translate(-1px, 1px) rotate(0deg); }
+70% { -webkit-transform: translate(1px, 1px) rotate(-1deg); }
+80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+90% { -webkit-transform: translate(1px, 1px) rotate(0deg); }
+100% { -webkit-transform: translate(1px, -1px) rotate(-1deg); }
+}
+#range_error:hover,#range_error:focus,
+.error div:hover,.error div:focus{
+-webkit-animation-name: shake;
+-webkit-animation-duration: 0.8s;
+-webkit-transform-origin:50% 50%;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: linear;
+}
+input[name="number_store"]{
+    display:inline-block;
+}
+.error div{
+    display: inline-block;
+}
+.error1{
+padding-right:126px;
+text-align:right;
+    float:right;
+}
+

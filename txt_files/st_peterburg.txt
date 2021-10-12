@@ -1,0 +1,15 @@
+10010, Ozon, 13.00
+10003, Wildberries, 10.99
+10006, Ostin, 8.99
+10001, Wildberries, 5.40
+10005, Adidas, 25.99
+10011, Sportmaster, 7.00
+10010, H&M, 12.00
+10008, Nike, 15.00
+10007, Wildberries, 14.00
+10010, Nike, 14.00
+10001, Sportmaster, 5.50
+10002, Ozon, 16.00
+10003, H&M, 5.00
+10001, Nike, 10.50
+10003, Ostin, 6.00

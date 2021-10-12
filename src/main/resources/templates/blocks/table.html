@@ -1,0 +1,26 @@
+<div th:fragment="table">
+    <div class="main-table" id="main-table">
+        <div class="tbl-header">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="th1">Ключ продукта</th>
+                        <th id="th2">Название магазина</th>
+                        <th id="th3">Стоимость (в тыс.)</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content" >
+            <table>
+                <tbody id="tbl-content">
+                    <tr th:each="el:${goodsList}">
+                        <td th:text="${el.getId}"></td>
+                        <td th:text="${el.getStoreName}"></td>
+                        <td th:text="${el.getPrice}" ></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
