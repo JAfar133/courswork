@@ -5,7 +5,7 @@
             <ul th:each="el:${fileList}" class="list_ul">
                 <li class="list_li">
                     <input name = "file" type="submit" th:value="${el}">
-                    <input name="del" type = "submit" th:value="${'del'+'   '+el}"/>
+                    <input name="del" type = "submit" hidden th:value="${'          '+el}"style="background-image:url(css/images/trash32.png);background-repeat: no-repeat; background-position: 1px 2px;"/>
                 </li>
             </ul>
         </div>

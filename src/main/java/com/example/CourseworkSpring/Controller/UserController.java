@@ -60,7 +60,8 @@ public class UserController {
             goodsService.getList(f);
         }
         if(del!=null){
-            String fileName = del.split("   ")[1];
+            String fileName = del.trim();
+            System.out.println(fileName);
             goodsService.delFileFromServer(fileName);
         }
         model.addAttribute("fileList",goodsService.getFileNameList());
