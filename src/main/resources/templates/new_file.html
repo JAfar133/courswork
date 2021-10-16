@@ -7,22 +7,25 @@
     <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_header.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_table.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_panel.css}"/>
-    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_form.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{styles/css/fileList.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/css/style_form.css}"/>
+
     <style>body{background-image: url("css/images/qweasd.jpg");} </style>
 </head>
 <body>
     <header th:insert="blocks/header :: header"></header>
     <div class="page_layout">
-        <form class="input_text" action="/new_file" method="post">
-            <div class="inputText">
-                <div style="color:#CAD4D6;">Заполните форму</div>
-                <input type="text" class="form-control" name="filename" placeholder="file.txt">
-                <textarea name="text_file"></textarea></p>
-                <a class = "BACK" href="/">НАЗАД</a>
-                <input class = "GO" type="submit" value="ОТПРАВИТЬ"/>
-            </div>
-        </form>
+        <div class="block-body">
+            <form class="input_text" action="/new_file" method="post">
+                <div class="inputText">
+                    <div style="color:#CAD4D6;">Заполните форму</div>
+                    <input type="text" class="form-control" name="filename" placeholder="file.txt">
+                    <textarea name="text_file" class="text_area" placeholder="10001, Sportmaster, 10.9"></textarea>
+                    <a href="/" class = "BACK">НАЗАД</a>
+                    <input class = "GO" type="submit" value="ОТПРАВИТЬ"/>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

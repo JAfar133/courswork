@@ -22,14 +22,14 @@
             </div>
             <div th:insert="blocks/table :: table"></div>
             <div class="edit_panel">
-                <span style="margin-top:80px; margin-left:70px; color:#CAD4D6;">Чтобы сохранить изменения нажмите закончить редактирования</span>
+                <span>Чтобы сохранить изменения нажмите закончить редактирования</span>
                 <form th:object="${goods}" action="" method="POST">
                     <div th:if="${Error}" class="error" style="color:#CA0003;">
-                        <input th:if="${#fields.hasErrors('id')}" th:field="*{id}" id="errorIn" type="text" name="id" placeholder="10001" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);">
+                        <input th:if="${#fields.hasErrors('id')}" th:field="*{id}" class="errorIn" type="text" name="id" placeholder="10001">
                         <input th:unless="${#fields.hasErrors('id')}" th:field="*{id}" class="inline" type="text" name="id" placeholder="10001">
                         <input th:unless="${storeNameNull}"th:field="*{storeName}" class="inline" type="text" name="store_name" placeholder="Sportmaster">
-                        <input th:if="${storeNameNull}" th:field="*{storeName}" class="errorIn" type="text" name="store_name" placeholder="Sportmaster" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);">
-                        <input th:if="${#fields.hasErrors('price')}" th:field="*{price}" class="errorIn" type="text" name="price" placeholder="5.5" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);">
+                        <input th:if="${storeNameNull}" th:field="*{storeName}" class="errorIn" type="text" name="store_name" placeholder="Sportmaster">
+                        <input th:if="${#fields.hasErrors('price')}" th:field="*{price}" class="errorIn" type="text" name="price" placeholder="5.5">
                         <input th:unless="${#fields.hasErrors('price')}" th:field="*{price}" class="inline" type="text" name="price" placeholder="5.5">
                         <div>Ошибка ввода</div>
                     </div>

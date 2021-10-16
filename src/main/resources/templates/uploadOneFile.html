@@ -16,14 +16,16 @@
 <header th:insert="blocks/header :: header"></header>
 <div class="page_layout">
     <!-- MyUploadForm -->
-    <div class="upload">
-        <h3 style="color:#CAD4D6;">Загрузите один файл:</h3>
-        <form th:object="${myUploadForm}" method="POST"
-              action="" enctype="multipart/form-data">
-            <input style="color:#CAD4D6;" th:field="*{fileDatas}" type="file"/>
-            <br />
-            <input type="submit" value="Загрузить">
-        </form>
+    <div class="block-body">
+        <div class="upload">
+            <h3 style="color:#CAD4D6;">Загрузите один файл:</h3>
+            <form th:object="${myUploadForm}" method="POST"
+                  action="" enctype="multipart/form-data">
+                <input style="color:#CAD4D6;" th:field="*{fileDatas}" type="file"/>
+                <br />
+                <input type="submit" value="Загрузить">
+            </form>
+        </div>
     </div>
 </div>
 </body>

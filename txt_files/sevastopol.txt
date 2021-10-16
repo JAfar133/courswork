@@ -1,0 +1,9 @@
+10001, Nike, 10.50
+10001, Sportmaster, 5.50
+10002, Ostin, 7.00
+10003, Wildberries, 10.99
+10003, Spormaster, 10.00
+10009, Nike, 20.00
+10010, Nike, 14.00
+10010, Ozon, 13.00
+10011, Sportmaster, 7.00

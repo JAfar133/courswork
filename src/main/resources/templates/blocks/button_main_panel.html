@@ -1,33 +1,35 @@
 <div th:fragment="button_main_panel">
     <div class="box">
         <div class="button_pannel">
-            <form action="/filter" method="get">
-                <div id="filter_text" style="color:#CAD4D6;">Введите фильтр для товаров</div>
-                <input type="text" name="filter" placeholder="puma"/>
-                <input class = "at_filter" type="submit" value="Применить фильтр" /></br>
-            </form>
+            <div class="panel">
+                <form action="/filter" method="get">
+                    <span id="filter_text">Введите фильтр для товаров</span>
+                    <input type="text" name="filter" placeholder="puma"/>
+                    <input class = "at_filter" type="submit" value="Применить фильтр" /></br>
+                </form>
+            </div>
             <div class = panel>
-                <a th:inline="text" href="/avg_price" class = "line_2" name="avg">Средняя цена <span th:text="${avgPrice}"></span></a>
+                <a th:inline="text" href="/avg_price" class = "line_2" name="avg">Средняя цена <span th:text="${avgPrice}" style="color:#000;"></span></a>
                 <a href="/" class="line_2" id="line_2_a">Вывести всё</a>
 
-                <span th:unless="${Error}" class="range_text" style="color:#CAD4D6;">Укажите границы диапазона</span>
-                <span th:if="${Error}" class="range_text" id="range_error" style="color:#CA0003;">Укажите границы диапазона</span>
+                <span th:unless="${Error}" class="range_text">Укажите границы диапазона</span>
+                <span th:if="${Error}" class="range_text" id="range_error">Укажите границы диапазона</span>
                 <a href="/above_avg" class = "above_avg" >Цена выше среднего</a>
                 <form action="/between" method="get">
-                    <div th:unless="${Error}"style="color:#C10003;">
+                    <div th:unless="${Error}">
                         <input type="text" name="range1" class="range" placeholder="цена1"/>
                         <input type="text" name="range2" class="range" placeholder="цена2"/>
                         <input class = "in_range" type="submit" value="Цена в диапазоне"/>
                     </div>
-                    <div th:if="${Error}"style="color:#C10003;">
-                        <input type="text" name="range1" class="errorIn" placeholder="цена1" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);"/>
-                        <input type="text" name="range2" class="errorIn" placeholder="цена2" style="border: 1px solid rgba(202,00,3,0.7); background-color:rgba(202,00,3,0.05);"/>
+                    <div th:if="${Error}">
+                        <input type="text" name="range1" class="errorIn" placeholder="цена1"/>
+                        <input type="text" name="range2" class="errorIn" placeholder="цена2"/>
                         <input class = "in_range" type="submit" value="Цена в диапазоне"/>
                     </div>
                 </form>
             </div>
+            <div style="text-align:center;"><span style="color:#CAD4D6;">Сортировки</span></div>
             <div class="sort">
-                <div style="text-align:center;"><span style="color:#CAD4D6;">Сортировки</span></div>
                 <a href="/sort_key_costs" class = "sort_key_costs">По ключу и стоимости</a>
                 <a href="/sort_key_storename" class = "sort_key_storename">По ключу и магазину</a>
                 <a href="/sort_storename_costs" class = "sort_storename_costs">По магазину и стоимости</a>

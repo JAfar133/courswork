@@ -1,6 +1,7 @@
 .file_list{
+    background:#222831;
     float:left;
-    margin-left:5px;
+    margin-left:15px;
     display:block;
     width:300px;
     max-height:800px;
@@ -22,37 +23,44 @@ h3{
     overflow:hidden;
 }
 .list_li input{
+  font-size:12pt !important;
   text-align:left;
-  padding-left:30px;
-  margin-left:4px;
+  padding-left:20px;
+  margin-left:5px;
   margin-right:-4px;
   width:230px;
   margin-bottom:1px;
-  height:40px;
+  height:36px;
   text-decoration: none;
   display: inline-block;
-  background-color: rgba(26,38,69,0.8);
-  border: 1px solid #37B5A5;
-  color:#CAD4D6;
+  background-color: rgba(246,246,246,1);
+  border: 1px solid #112D4E;
+  color:#000;
   cursor:pointer;
   border-radius: 5px 0 0 5px;
   transition: 0.25s;
 }
 input[name="del"]{
+
     border-radius: 0 5px 5px 0;
     margin-left:-1px;
     padding-left:7px;
     width:36px;
-    background:rgba(202,00,3,0.9);
-    border: 1px solid #37B5A5;
+    background:rgba(202,00,3,0.95);
+    border: 1px solid #112D4E;
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    transition:0.25s;
 }
 .list_li input:hover{
-    color:#fff;
-    background-color:rgba(30, 51, 82, 0.8);
-    border:1px solid #CAD4D6;
+    background-color: rgba(246,246,246,0.9);
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+
 }
 input[name="del"]:hover{
     color:#fff;
     background-color:#32cd32;
-    border:1px solid #CAD4D6;
+    border: 1px solid #112D4E;
+    transition:0.25s;
+
 }

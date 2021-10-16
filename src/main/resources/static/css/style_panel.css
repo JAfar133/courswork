@@ -1,123 +1,135 @@
+
+input::placeholder { /* WebKit, Blink, Edge */
+    color:    #414141;
+}
+
+textarea::placeholder {
+  color: #a6a6a6;
+}
 .edit_panel{
     margin-top:80px;
-}
-.sort a{
-   padding-top:5px;
-   margin-top:5px;
-   margin-bottom:5px;
-   width:147px;
-   height:50px;
-   text-decoration: none;
-   display: inline-block;
-   background-color:rgba(26,38,69,0.8);
-   text-align:center;
-   border: 1px solid #37B5A5;
-   color:#CAD4D6;
+    width:774px;
 
 }
-.number_store{
-text-align:left;
-}
 .edit_panel input{
+    width:255px !important;
     margin-top:5px;
     margin-bottom:5px;
-    width:196px;
     height:30px;
-    text-decoration: none;
-    display: inline-block;
-    background-color:rgba(26,38,69,0.8);
-    text-align:center;
-    border: 1px solid #37B5A5;
-    color:#CAD4D6;
 }
 .edit_panel input[type="submit"]{
     margin-bottom:0px;
-    width:195px;
+    width:385px !important;
+    height:40px;
     margin-right:0px;
-}
-.edit_panel input[name="store_name"]{
-    width:197px;
-}
-.edit_panel input[name="price"]{
-    width:200px;
-}
-.edit_panel input[name="delete_group"],.edit_panel input[name="update"]{
-    width:401px;
+    display:inline-block;
 }
 .edit_panel input[name="add"],.edit_panel input[name="update"]{
     margin-top:10px;
 }
-
-.button_pannel input{
-  margin-top:5px;
-  margin-bottom:5px;
-  width:298px;
-  height:30px;
-  text-decoration: none;
-  display: inline-block;
-  background-color: rgba(26,38,69,0.8);
-  text-align:center;
-  border: 1px solid #37B5A5;
-  color:#CAD4D6;
+.edit_panel span{
+    float:center;
 }
-.panel a{
-    padding-top:5px;
-    margin-top:5px;
-    margin-bottom:5px;
-    width:298px;
+.block-body input[type="submit"],.block-body a{
+    background-color: rgba(227,227,227,1);
+    width:385px;
     height:30px;
     text-decoration: none;
-    display: inline-block;
-    background-color:rgba(26,38,69,0.8);
+    border: 1px solid #7098DA;
+    color:#000;
     text-align:center;
-    border: 1px solid #37B5A5;
-    color:#CAD4D6;
+}
+.block-body input[type="text"]{
+    width:385px;
+    height:30px;
+}
+input[type="text"]{
+    padding-top:1px;
+    background-color:rgba(224,252,255,0.4);
+    text-align:center;
+    color:#000;
+}
+.button_pannel{
+    width: 774px;
+}
+.sort{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.sort a{
+   width:190px;
+   margin-top:5px;
+   margin-bottom:5px;
+   height:30px;
+
+}
+.sort a:last-child{
+    width:192px;
+}
+.number_store{
+text-align:left;
+}
+.button_pannel{
+    font-size:16px;
+}
+.panel a, .panel input{
+    margin-top:5px;
+    margin-bottom:5px;
+
+    display: inline-block;
 }
 input[type="submit"], a .edit_panel input{
     cursor: pointer;
 }
 input[name="range1"],input[name="range2"]{
   margin-top:5px;
-  margin-left:19px;
-  width:120px;
+  margin-left:20px;
+  margin-right:20px;
+  width:150px !important;
+}
+input[name="range2"]{
+    margin-right:21px;
 }
 
-input[name="range1"],input[name="range2"],input[name="filter"]{
-    border:1px solid #CAD4D6;
-    color: #CAD4D6;
-    background:none;
-}
-input[name="number_store"]{
-    margin-top:-10px;
-    border:1px solid #000;
-    color: #fff;
-    height:31px;
-}
 input[name="range1"]:hover,input[name="range2"]:hover,input[name="filter"]:hover{
-    border:1px solid #37B5A5;
-    background:none;
+    border:1px solid #fff;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+
 }
-input[type="submit"]:hover, .box a:hover, .edit_panel input[type="submit"]:hover, .inputText a:hover{
-    color:#fff;
-    background-color:rgba(30, 51, 82, 0.8);
-    border:1px solid #CAD4D6;
+.block-body input[type="submit"]:hover,.block-body a:hover{
+
+    background-color: rgba(227,227,227,0.9);
+    border:1px solid rgba(112,161,215,1);
+    transition:0.25s;
+    box-shadow: 0 0 10px rgba(112,161,215,0.5);
 }
 .range_text{
   display: inline-block;
-  margin-left:55px;
+  width:385px;
+  text-align:center;
 }
 #filter_text{
+    width:385;
+    display:block;
     margin-top:20px;
-    margin-left:48px;
-}
-.above_avg{
-  margin-left:49px;
-  display: inline-block;
-}
-.in_range{
-  margin-left:16px;
+    margin-left:90px;
 }
 #min_max{
-    width:600px;
+    width: 774px;
 }
+span{
+    color:#CAD4D6;
+}
+.errorIn::-webkit-input-placeholder{
+    color: rgba(249,89,89,0.5);
+}
+#range_error{
+    color:#F95959 !important;
+}
+.errorIn{
+    border: 1px solid rgba(202,00,3,0.7);
+    background-color:rgba(202,00,3,0.15) !important;
+}
+
 

@@ -1,49 +1,42 @@
 .inputText{
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
+    width: 774px;
 }
 .inputText div{
+font-size:16pt;
     text-align:center;
-    color:#CAD4D6;
-    background-color:#1A2645;
-    border:2px solid #425380;
     padding-top:10px;
     padding-bottom:10px;
+    margin-bottom:10px;
 }
 .GO{
-  width:298px;
-  height:50px;
-  background-color:rgba(26,38,69,0.8);
-  color:#CAD4D6;
-  border:1px solid #37B5A5;
+    width:385px;
+    height:40px !important;
+    border-radius:0 0 20px 0;
+}
+.BACK{
+    padding-top:10px !important;
+    display:inline-block;
+    border-radius:0 0 0 20px;
+    width:385px;
+    height:40px !important;
 }
 .form-control{
-    width:600px;
-      height:50px;
+
+      text-align:left !important;
+      padding-left:5px;
+      width:774px !important;
+      height:50px !important;
       background-color:#1A2645;
+      border:1px solid #3F72AF;
       color:#CAD4D6;
-      border:1px solid #37B5A5;
 }
-.input_text a{
-  width:298px;
-  height:50px;
-  text-decoration: none;
-  color:#CAD4D6;
-  background: none;
-  display: inline-block;
-  background-color:rgba(26,38,69,0.8);
-  text-align:center;
-  border: 1px solid #37B5A5;
-  padding: 14px 40px;
-  outline: none;
-  color:#CAD4D6;
-  cursor: pointer;
-}
+
 textarea{
-    width:600px;
+    margin-top:10px;
+    padding-left:5px;
+    width:774px;
     height:350px;
     background-color:#FFF7F3;
-    border:2px solid #425380;
+    border:1px solid #3F72AF;
     font-size: 18pt;
 }

@@ -1,13 +1,20 @@
 <div th:fragment="list" class="file_list">
     <h3 style="color:#CAD4D6;" id="list_h3">Список файлов на сервере</h3>
     <form action="/select">
-        <div class="scroll">
-            <ul th:each="el:${fileList}" class="list_ul">
-                <li class="list_li">
-                    <input name = "file" type="submit" th:value="${el}">
-                    <input name="del" type = "submit" hidden th:value="${'          '+el}"style="background-image:url(css/images/trash32.png);background-repeat: no-repeat; background-position: 1px 2px;"/>
-                </li>
-            </ul>
-        </div>
+        <ul id="scroll1">
+            <li th:each="el:${fileList}" class="list_li">
+                <input name = "file" type="submit" th:value="${el}">
+                <input name="del" type = "submit" hidden th:value="${'          '+el}"style="background-image:url(css/images/icons8-удалить-24.svg);"/>
+            </li>
+            <script>
+                scroll1.addEventListener("click",function(event){
+                    if(event.target.name=='del'){
+                        var file = event.target.value.trimStart();
+                        var r =confirm('\u{26D4} Удалить файл \'' + file + '\' на сервере?');
+                        if(!r) {event.preventDefault();}
+                    }
+                });
+            </script>
+        </ul>
     </form>
 </div>
